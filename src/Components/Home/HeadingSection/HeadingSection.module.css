@@ -1,0 +1,29 @@
+.HeadingSection {
+  height: 55rem;
+  position: relative;
+}
+.HeadingSection > img {
+  height: 100%;
+}
+.Details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 4;
+}
+.Heading {
+  width: 70%;
+}
+.HeadingDescription {
+  width: 70%;
+  font-weight: 500;
+  font-size: 1.7rem;
+  line-height: 20px;
+}

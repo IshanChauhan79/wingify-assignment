@@ -1,0 +1,13 @@
+.BackgroundEllipse {
+  position: absolute;
+  overflow: hidden;
+  bottom: 50rem;
+  left: -40rem;
+  z-index: -1;
+}
+.BackgroundEllipseComponent {
+  background-color: #c7acda;
+  width: 253rem;
+  height: 96rem;
+  border-radius: 50%;
+}
