@@ -1,12 +1,15 @@
 .BackgroundEllipse {
   position: absolute;
   overflow: hidden;
-  bottom: 50rem;
-  left: -40rem;
+  width: 100%;
+  height: 100%;
   z-index: -1;
 }
 .BackgroundEllipseComponent {
   background-color: #c7acda;
+  position: absolute;
+  bottom: 50rem;
+  left: -40rem;
   width: 253rem;
   height: 96rem;
   border-radius: 50%;

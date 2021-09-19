@@ -1,0 +1,61 @@
+.CreateAccount {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 4rem 6rem;
+  min-width: 45rem;
+}
+.TItle {
+  font-weight: bold;
+  font-size: 2.4rem;
+  line-height: 28px;
+}
+.SubmitAccountForm {
+  width: 188px;
+  height: 44px;
+  left: calc(50% - 188px / 2 + 161px);
+  border: 0;
+  background: #2d9cdb;
+  border-radius: 4px;
+  font-size: 1.8rem;
+  line-height: 21px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.InputDataDescription {
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 19px;
+  margin-bottom: 0.8rem;
+}
+.InputDataDescriptionSpan {
+  font-size: 1.2rem;
+}
+.InputDataContainer > input {
+  border: 2px solid #bdbdbd;
+  width: 100%;
+  height: 37px;
+  padding: 0 1rem;
+  font-size: 14px;
+  line-height: 16px;
+  color: #666666;
+  transition: all 0.3s ease-in-out;
+}
+.InputDataContainer > input:focus {
+  outline: none;
+  border: 2px solid #666666;
+}
+.InputRadioButton {
+  display: flex;
+  align-items: center;
+}
+.InputRadioButton > input {
+  width: 1.8rem;
+  height: 1.8rem;
+  margin: 0;
+}
+.InputRadioButton > span {
+  margin: 0 5rem 0 0.8rem;
+  font-size: 1.4rem;
+}

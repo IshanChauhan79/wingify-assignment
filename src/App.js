@@ -21,7 +21,6 @@ export default App;
 // function App() {
 //   return (
 //     <div className={classes.App}>
-//       <BackgroundEllipse />
 //     </div>
 //   );
 // }
