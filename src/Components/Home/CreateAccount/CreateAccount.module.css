@@ -49,7 +49,6 @@
   border: 2px solid #666666;
 }
 
-
 .DOBContainer {
   display: flex;
   justify-content: space-between;
@@ -69,8 +68,6 @@
 .DOBYear {
   width: 35%;
 }
-
-
 
 .DOBMonth > input,
 .DOBYear > input {
@@ -96,7 +93,7 @@
   padding: 1rem;
   padding-right: 1rem;
   width: 100%;
-  
+
   height: 37px;
   overflow-y: scroll;
 }
@@ -104,4 +101,26 @@
 .DOBMonth select::-ms-expand,
 .DOBYear select::-ms-expand {
   display: none;
+}
+
+@media screen and (max-width: 56em) {
+  .CreateAccount {
+    padding: 2rem 4rem;
+    width: 35rem;
+  }
+}
+@media screen and (max-width: 42em) {
+  .CreateAccount {
+    flex-grow: 2;
+    padding: 4rem 5rem;
+    width: 85%;
+    margin: 0 auto;
+    max-height: 60rem;
+  }
+}
+@media screen and (max-width: 32em) {
+  .CreateAccount {
+    width: 100%;
+    padding: 4rem 3rem;
+  }
 }
