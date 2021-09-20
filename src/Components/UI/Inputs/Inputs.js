@@ -1,39 +1,41 @@
-import React from "react";
+import React, { memo } from "react";
 import classes from "./Inputs.module.css";
 
 function Inputs(props) {
-  if (props.type === "text") {
+  if (props.type === "number") {
     return (
       <div className={classes.Inputs}>
         <input
-          type="text"
+          type="number"
+          min={props.min}
+          max={props.max}
           className={[
             classes.InputText,
             props.error ? classes.InputError : null,
           ].join(" ")}
         />
-        {props.error ? (
-          <div className={classes.InputErrorMessage}>
-            Please add valid email address
-          </div>
-        ) : null}
       </div>
     );
   }
-  if (props.type === "number");
   return (
     <div className={classes.Inputs}>
       <input
-        type="number"
-        min={props.min}
-        max={props.max}
+        type={props.type}
+        value={props.value}
+        onChange={(e) => props.change(e, props.type)}
         className={[
           classes.InputText,
           props.error ? classes.InputError : null,
         ].join(" ")}
       />
+      {props.error ? (
+        <div className={classes.InputErrorMessage}>
+          Please add valid email address
+        </div>
+      ) : null}
     </div>
   );
 }
+export default memo(Inputs);
 
-export default Inputs;
+// export default memo(Inputs);

@@ -53,3 +53,25 @@
   left: 0;
   transform: translateX(-100%);
 }
+
+@media screen and (max-width: 65em) {
+  .InputErrorMessage {
+    width: auto;
+    padding: 0.5rem;
+    top: auto;
+    right: auto;
+    left: 0;
+    bottom: 0;
+    transform: translateX(0) translateY(107%);
+    z-index: 2;
+  }
+  .InputErrorMessage::after {
+    display: none;
+  }
+}
+@media screen and (max-width: 42em) {
+  .InputErrorMessage {
+    padding: 0.6rem;
+    transform: translateX(0) translateY(110%);
+  }
+}

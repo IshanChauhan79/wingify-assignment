@@ -36,7 +36,8 @@
 
 @media screen and (max-width: 56em) {
   .HeadingSection {
-    height: 45rem;
+    height: 55rem;
+    width:32rem ;
   }
   .Heading {
     width: 80%;
@@ -51,6 +52,7 @@
     position: relative;
     border-radius: 0;
     overflow: hidden;
+    width: 100%;
   }
   .ImageForDesktop {
     display: none;

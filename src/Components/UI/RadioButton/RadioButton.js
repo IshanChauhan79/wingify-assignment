@@ -7,7 +7,7 @@ function RadioButton(props) {
       {props.buttonList.map((item, i) => [
         <input
           type="radio"
-          id={props.name}
+          // id={props.name}
           name={props.name}
           value={item}
           defaultChecked={i===0}

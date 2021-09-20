@@ -1,9 +1,13 @@
 .CreateAccount {
+  padding: 4rem 6rem;
+  width: 45rem;
+}
+.Form {
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 4rem 6rem;
-  width: 45rem;
 }
 .TItle {
   font-weight: bold;
@@ -107,6 +111,7 @@
   .CreateAccount {
     padding: 2rem 4rem;
     width: 35rem;
+    height: 55rem;
   }
 }
 @media screen and (max-width: 42em) {
