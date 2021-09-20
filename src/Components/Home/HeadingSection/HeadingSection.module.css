@@ -53,6 +53,7 @@
     border-radius: 0;
     overflow: hidden;
     width: 100%;
+    max-height: 22rem;
   }
   .ImageForDesktop {
     display: none;

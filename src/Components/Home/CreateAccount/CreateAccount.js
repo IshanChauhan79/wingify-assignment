@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import classes from "./CreateAccount.module.css";
 import Inputs from "../../UI/Inputs/Inputs";
 import RadioButton from "../../UI/RadioButton/RadioButton";
@@ -9,6 +9,9 @@ function CreateAccount() {
   const [password, setPassword] = useState("");
   const [isEmailValid, setIsEmailValid] = useState(true);
   const [isPasswordValid, setIsPasswordValid] = useState(true);
+  const [agencyOrInd, setAgencyOrInd] = useState("agency");
+  const [day, setday] = useState("");
+  const [isDayValid, setIsDayValid] = useState(true);
 
   const inputChangeHandler = useCallback(
     (e, type) => {
@@ -24,9 +27,19 @@ function CreateAccount() {
         }
         setPassword(e.target.value.trim());
       }
+      if (type === "day") {
+        if (!isDayValid) {
+          setIsDayValid(true);
+        }
+        setday(e.target.value.trim());
+      }
     },
-    [isEmailValid, isPasswordValid]
+    [isEmailValid, isPasswordValid, isDayValid]
   );
+
+  const agencyIndividualChangeHandler = useCallback((e) => {
+    setAgencyOrInd(e.target.value);
+  }, []);
 
   const formSubmitHandler = (e) => {
     e.preventDefault();
@@ -35,13 +48,16 @@ function CreateAccount() {
     if (!checkEmail) {
       setIsEmailValid(false);
     }
+    if (day === "") {
+      setIsDayValid(false);
+    }
     if (!checkPassword) {
       setIsPasswordValid(false);
       return;
     }
-    if (checkPassword && checkEmail) {
+    if (checkPassword && checkEmail && day === "") {
       console.log("email and password is valid");
-      console.log(email, password);
+      console.log(email, password, day, agencyOrInd);
     }
   };
 
@@ -57,6 +73,7 @@ function CreateAccount() {
             change={inputChangeHandler}
             error={!isEmailValid}
             value={email}
+            errorMessage="Please add valid email address"
           />
         </div>
         <div className={classes.InputDataContainer}>
@@ -70,7 +87,15 @@ function CreateAccount() {
           <div className={classes.DOBContainer}>
             <div className={classes.DOBDate}>
               <div className={classes.DOBType}>Date</div>
-              <Inputs type="nnumber" min={1} max={31} error={false} />
+              <Inputs
+                type="number"
+                typeFor="day"
+                min={1}
+                max={31}
+                change={inputChangeHandler}
+                value={day}
+                error={!isDayValid}
+              />
             </div>
             <div className={classes.DOBMonth}>
               <div className={classes.DOBType}>Month</div>
@@ -104,16 +129,23 @@ function CreateAccount() {
             change={inputChangeHandler}
             error={!isPasswordValid}
             value={password}
+            errorMessage="Please add valid password"
           />
         </div>
         <div className={classes.InputDataContainer}>
           <div className={classes.InputDataDescription}>
             Are you an agency or individual?
           </div>
-          <RadioButton
-            buttonList={["Agency", "Individual"]}
-            name="agency_individual"
-          />
+          {useMemo(
+            () => (
+              <RadioButton
+                buttonList={["Agency", "Individual"]}
+                name="agency_individual"
+                change={agencyIndividualChangeHandler}
+              />
+            ),
+            [agencyIndividualChangeHandler]
+          )}
         </div>
         <button type="submit" className={classes.SubmitAccountForm}>
           Submit

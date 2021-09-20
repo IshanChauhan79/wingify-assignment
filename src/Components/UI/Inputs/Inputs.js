@@ -9,6 +9,8 @@ function Inputs(props) {
           type="number"
           min={props.min}
           max={props.max}
+          value={props.value}
+          onChange={(e) => props.change(e, props.typeFor)}
           className={[
             classes.InputText,
             props.error ? classes.InputError : null,
@@ -29,9 +31,7 @@ function Inputs(props) {
         ].join(" ")}
       />
       {props.error ? (
-        <div className={classes.InputErrorMessage}>
-          Please add valid email address
-        </div>
+        <div className={classes.InputErrorMessage}>{props.errorMessage}</div>
       ) : null}
     </div>
   );
