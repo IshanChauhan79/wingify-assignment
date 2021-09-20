@@ -1,0 +1,55 @@
+.Inputs {
+  position: relative;
+}
+.Inputs input::-webkit-outer-spin-button,
+.Inputs input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.Inputs input[type="number"] {
+  -moz-appearance: textfield;
+}
+.InputText {
+  border: 2px solid #bdbdbd;
+  width: 100%;
+  height: 37px;
+  padding: 0 1rem;
+  font-size: 14px;
+  line-height: 16px;
+  color: #666666;
+  transition: all 0.3s ease-in-out;
+}
+.InputText:focus {
+  outline: none;
+  border: 2px solid #666666;
+}
+.InputError {
+  border: 2px solid #eb5757 !important;
+}
+.InputErrorMessage {
+  position: absolute;
+  background: #eb5757;
+  border-radius: 3px;
+  color: white;
+  font-size: 1.3rem;
+  line-height: 15px;
+  width: 15rem;
+  padding: 0.3rem;
+  top: 0;
+  right: 0;
+  transform: translateX(105%);
+}
+.InputErrorMessage::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 6px solid #eb5757;
+  top: 0.4rem;
+  left: 0;
+  transform: translateX(-100%);
+}

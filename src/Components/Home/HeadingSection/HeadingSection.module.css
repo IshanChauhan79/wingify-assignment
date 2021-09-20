@@ -1,7 +1,9 @@
 .HeadingSection {
   height: 55rem;
   position: relative;
-  /* width: 100%; */
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  overflow: hidden;
 }
 .HeadingSection > img {
   height: 100%;
@@ -18,7 +20,6 @@
   align-items: center;
   flex-direction: column;
   z-index: 4;
-
 }
 .Heading {
   width: 70%;
