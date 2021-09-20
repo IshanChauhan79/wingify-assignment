@@ -1,0 +1,74 @@
+.SelectInput {
+  border: 2px solid #bdbdbd;
+  width: 100%;
+  height: 37px;
+  padding: 0 1rem;
+  font-size: 14px;
+  line-height: 16px;
+  color: #666666;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+  position: relative;
+}
+.DropMenuOpened {
+  border: 2px solid #666666 !important;
+}
+.SelectButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.SelectButton > img {
+  height: 1.2rem;
+}
+.RotateImageForOpenDropDown {
+  transform: rotate(180deg);
+}
+
+.DropdownMenu {
+  background-color: white;
+  position: absolute;
+  bottom: -0.3rem;
+  left: 0;
+  transform: translateY(100%);
+  z-index: 10;
+  width: 100%;
+  border: 2px solid #bdbdbd;
+  max-height: 20rem;
+  overflow: auto;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.19);
+  scrollbar-width: thin;
+}
+
+.DropdownMenu::-webkit-scrollbar {
+  /* width of the entire scrollbar */
+  width: 7px;
+}
+.DropdownMenu::-webkit-scrollbar-track {
+  /* color of the tracking area */
+  background: #f1f1f1;
+}
+.DropdownMenu::-webkit-scrollbar-thumb {
+  /* color of the scroll thumb */
+  background-color: #a8a8a8;
+  /* roundness of the scroll thumb */
+  border-radius: 20px;
+}
+.DropdownMenu > div {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #bdbdbd;
+}
+.DropdownMenu > div:hover {
+  background-color: hsl(0, 0%, 90%);
+}
+.DropdownMenu > div:last-child {
+  border-bottom: 0;
+}
+.SelctedOption {
+  background-color: hsl(0, 0%, 80%);
+}

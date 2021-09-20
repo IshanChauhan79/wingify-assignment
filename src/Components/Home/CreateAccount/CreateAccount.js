@@ -3,6 +3,8 @@ import classes from "./CreateAccount.module.css";
 import Inputs from "../../UI/Inputs/Inputs";
 import RadioButton from "../../UI/RadioButton/RadioButton";
 import { validateInput } from "../../../services/validateInput";
+import SelectInput from "../../UI/SelectInput/SelectInput";
+import { getYears, MONTHS } from "./constants";
 
 function CreateAccount() {
   const [email, setEmail] = useState("");
@@ -11,6 +13,9 @@ function CreateAccount() {
   const [isPasswordValid, setIsPasswordValid] = useState(true);
   const [agencyOrInd, setAgencyOrInd] = useState("agency");
   const [day, setday] = useState("");
+  const [year, setYear] = useState(2000);
+  const [month, setMonth] = useState("January");
+
   const [isDayValid, setIsDayValid] = useState(true);
 
   const inputChangeHandler = useCallback(
@@ -37,6 +42,13 @@ function CreateAccount() {
     [isEmailValid, isPasswordValid, isDayValid]
   );
 
+  const yearChangedHandler = (value) => {
+    setYear(value);
+  };
+  const monthChangedHandler = (value) => {
+    setMonth(value);
+  };
+
   const agencyIndividualChangeHandler = useCallback((e) => {
     setAgencyOrInd(e.target.value);
   }, []);
@@ -57,7 +69,7 @@ function CreateAccount() {
     }
     if (checkPassword && checkEmail && day === "") {
       console.log("email and password is valid");
-      console.log(email, password, day, agencyOrInd);
+      console.log(email, password, day, month, year, agencyOrInd);
     }
   };
 
@@ -99,24 +111,19 @@ function CreateAccount() {
             </div>
             <div className={classes.DOBMonth}>
               <div className={classes.DOBType}>Month</div>
-              <select name="Month" id="Month">
-                <option value="Jan">Jandfgh</option>
-                <option value="Feb">Feb</option>
-                <option value="mar">mar</option>
-                <option value="apr">apr</option>
-                <option value="may">may</option>
-                <option value="june">june</option>
-                <option value="july">july</option>
-                <option value="aug">aug</option>
-                <option value="sep">sep</option>
-                <option value="oct">oct</option>
-                <option value="nov">nov</option>
-                <option value="dec">dec</option>
-              </select>
+              <SelectInput
+                options={MONTHS}
+                value={month}
+                change={monthChangedHandler}
+              />
             </div>
             <div className={classes.DOBYear}>
               <div className={classes.DOBType}>Year</div>
-              <input type="text" />
+              <SelectInput
+                options={getYears()}
+                value={year}
+                change={yearChangedHandler}
+              />
             </div>
           </div>
         </div>

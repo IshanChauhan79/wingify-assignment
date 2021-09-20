@@ -54,10 +54,10 @@
   width: 20%;
 }
 .DOBMonth {
-  width: 35%;
+  width: 40%;
 }
 .DOBYear {
-  width: 35%;
+  width: 30%;
 }
 
 .DOBMonth > input,
