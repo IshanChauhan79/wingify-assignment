@@ -168,7 +168,7 @@ function CreateAccount() {
             change={inputChangeHandler}
             error={!isPasswordValid}
             value={password}
-            errorMessage="Please add valid password"
+            errorMessage="minimum 6 characters"
           />
         </div>
 
