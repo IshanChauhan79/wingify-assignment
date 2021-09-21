@@ -139,7 +139,12 @@ function CreateAccount() {
             errorMessage="Please add valid password"
           />
         </div>
-        <div className={classes.InputDataContainer}>
+        <div
+          className={[
+            classes.InputDataContainer,
+            classes.InputDataRadioDesktop,
+          ].join(" ")}
+        >
           <div className={classes.InputDataDescription}>
             Are you an agency or individual?
           </div>
@@ -147,6 +152,30 @@ function CreateAccount() {
             () => (
               <RadioButton
                 buttonList={["Agency", "Individual"]}
+                name="agency_individual"
+                change={agencyIndividualChangeHandler}
+              />
+            ),
+            [agencyIndividualChangeHandler]
+          )}
+        </div>
+        <div
+          className={[
+            classes.InputDataContainer,
+            classes.InputDataRadioMobile,
+          ].join(" ")}
+        >
+          <div className={classes.InputDataDescription}>
+            Already using any of our other products?
+            <span className={classes.InputDataDescriptionSpan}>
+              {" "}
+              (Optional)
+            </span>
+          </div>
+          {useMemo(
+            () => (
+              <RadioButton
+                buttonList={["yes", "No"]}
                 name="agency_individual"
                 change={agencyIndividualChangeHandler}
               />

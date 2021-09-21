@@ -39,7 +39,6 @@
   font-size: 1.2rem;
 }
 
-
 .DOBContainer {
   display: flex;
   justify-content: space-between;
@@ -94,8 +93,14 @@
   display: none;
 }
 
+.InputDataRadioMobile {
+  display: none;
+}
+.InputDataRadioDesktop {
+  display: block;
+}
+
 @media screen and (max-width: 56em) {
-  
   .CreateAccount {
     padding: 2rem 4rem;
     width: 35rem;
@@ -108,6 +113,12 @@
     padding: 2.5rem 5rem;
     width: 85%;
     margin: 0 auto;
+  }
+  .InputDataRadioMobile {
+    display: block;
+  }
+  .InputDataRadioDesktop {
+    display: none;
   }
 }
 @media screen and (max-width: 32em) {
