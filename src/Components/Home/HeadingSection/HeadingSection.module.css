@@ -17,7 +17,7 @@
   left: 0;
   height: 100%;
   width: 100%;
-  color: white;
+  color: var(--clr-white);
   display: flex;
   justify-content: center;
   align-items: center;

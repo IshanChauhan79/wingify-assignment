@@ -3,8 +3,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: white;
-  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.19);
+  background-color: var(--clr-white);
+  box-shadow: var(--container-box-shadow);
   border-radius: 5px;
   display: flex;
 }
@@ -16,7 +16,7 @@
     left: 0;
     width: 100%;
     transform: translate(0%, 0%);
-    background-color: white;
+    background-color: var(--clr-white);
     box-shadow: 0;
     border-radius: 0;
     display: flex;

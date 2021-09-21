@@ -12,27 +12,27 @@
   -moz-appearance: textfield;
 }
 .InputText {
-  border: 2px solid #bdbdbd;
+  border: 2px solid var(--clr-gray-600);
   width: 100%;
   height: 37px;
   padding: 0 1rem;
   font-size: 14px;
   line-height: 16px;
-  color: #666666;
+  color: var(--clr-gray-800);
   transition: all 0.3s ease-in-out;
 }
 .InputText:focus {
   outline: none;
-  border: 2px solid #666666;
+  border: 2px solid var(--clr-gray-800);
 }
 .InputError {
-  border: 2px solid #eb5757 !important;
+  border: 2px solid var(--clr-error) !important;
 }
 .InputErrorMessage {
   position: absolute;
-  background: #eb5757;
+  background: var(--clr-error);
   border-radius: 3px;
-  color: white;
+  color: var(--clr-white);
   font-size: 1.3rem;
   line-height: 15px;
   width: 15rem;
@@ -48,7 +48,7 @@
   height: 0;
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
-  border-right: 6px solid #eb5757;
+  border-right: 6px solid var(--clr-error);
   top: 0.4rem;
   left: 0;
   transform: translateX(-100%);

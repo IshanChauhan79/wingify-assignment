@@ -15,14 +15,14 @@ export const validateInput = (value, type) => {
 
 // Return true if year is leap year
 function isLeap(year) {
-  return (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
+  return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
 }
 
 // Returns true if given date is valid or not
 export const checkDate = (d, m, y) => {
   // Handle February month
   // with leap year
-  if (m == 2) {
+  if (m === 2) {
     if (isLeap(y)) {
       return d <= 29;
     } else {
@@ -34,7 +34,7 @@ export const checkDate = (d, m, y) => {
   // Sept and Nov must have
   // number of days less than
   // or equal to 30.
-  if (m == 4 || m == 6 || m == 9 || m == 11) return d <= 30;
+  if (m === 4 || m === 6 || m === 9 || m === 11) return d <= 30;
 
   return true;
 };
