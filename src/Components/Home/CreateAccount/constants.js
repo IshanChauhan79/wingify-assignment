@@ -13,6 +13,10 @@ export const MONTHS = [
   "December",
 ];
 
+export const getMonthIndex = (value) => {
+  return MONTHS.findIndex((el) => value === el) + 1;
+};
+
 export const getYears = () => {
   var current = new Date().getFullYear() - 17;
   var years = [];

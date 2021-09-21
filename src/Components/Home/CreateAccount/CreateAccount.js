@@ -2,9 +2,9 @@ import React, { useCallback, useMemo, useState } from "react";
 import classes from "./CreateAccount.module.css";
 import Inputs from "../../UI/Inputs/Inputs";
 import RadioButton from "../../UI/RadioButton/RadioButton";
-import { validateInput } from "../../../services/validateInput";
+import { validateInput, checkDate } from "../../../services/validateInput";
 import SelectInput from "../../UI/SelectInput/SelectInput";
-import { getYears, MONTHS } from "./constants";
+import { getYears, MONTHS, getMonthIndex } from "./constants";
 
 function CreateAccount() {
   const [email, setEmail] = useState("");
@@ -60,14 +60,19 @@ function CreateAccount() {
     if (!checkEmail) {
       setIsEmailValid(false);
     }
+    let checkDateValid = checkDate(day, getMonthIndex(month), year);
     if (day === "") {
       setIsDayValid(false);
     }
+    if (!checkDateValid) {
+      setIsDayValid(false);
+    }
+
     if (!checkPassword) {
       setIsPasswordValid(false);
       return;
     }
-    if (checkPassword && checkEmail && day === "") {
+    if (checkPassword && checkEmail && checkDateValid && checkDateValid) {
       console.log("email and password is valid");
       console.log(email, password, day, month, year, agencyOrInd);
     }
