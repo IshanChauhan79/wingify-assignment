@@ -1,10 +1,10 @@
 .SelectInput {
   border: 2px solid var(--clr-gray-600);
   width: 100%;
-  height: 37px;
+  height: 3.7rem;
   padding: 0 1rem;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
   color: var(--clr-gray-800);
   transition: all 0.3s ease-in-out;
   background-color: var(--clr-white);
@@ -38,13 +38,13 @@
   border: 2px solid var(--clr-gray-800);
   max-height: 20rem;
   overflow: auto;
-  box-shadow: 0px 10px 20px var(--shdaow-color);
+  box-shadow: 0px 1rem 2rem var(--shdaow-color);
   scrollbar-width: thin;
 }
 
 .DropdownMenu::-webkit-scrollbar {
   /* width of the entire scrollbar */
-  width: 7px;
+  width: 0.7rem;
 }
 .DropdownMenu::-webkit-scrollbar-track {
   /* color of the tracking area */
@@ -54,7 +54,7 @@
   /* color of the scroll thumb */
   background-color: #a8a8a8;
   /* roundness of the scroll thumb */
-  border-radius: 20px;
+  border-radius: 2rem;
 }
 .DropdownMenu > div {
   width: 100%;

@@ -14,10 +14,10 @@
 .InputText {
   border: 2px solid var(--clr-gray-600);
   width: 100%;
-  height: 37px;
+  height: 3.7rem;
   padding: 0 1rem;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
   color: var(--clr-gray-800);
   transition: all 0.3s ease-in-out;
 }
@@ -31,10 +31,10 @@
 .InputErrorMessage {
   position: absolute;
   background: var(--clr-error);
-  border-radius: 3px;
+  border-radius: 0.3rem;
   color: var(--clr-white);
   font-size: 1.3rem;
-  line-height: 15px;
+  line-height: 1.5rem;
   width: 15rem;
   padding: 0.3rem;
   top: 0;
@@ -46,11 +46,11 @@
   position: absolute;
   width: 0;
   height: 0;
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-  border-right: 6px solid var(--clr-error);
+  border-top: 0.5rem solid transparent;
+  border-bottom: 0.5rem solid transparent;
+  border-right: 0.6rem solid var(--clr-error);
   top: 0.4rem;
-  left: 0;
+  left: 1px;
   transform: translateX(-100%);
 }
 

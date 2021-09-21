@@ -17,6 +17,8 @@ code {
 }
 :root {
   font-size: 62.5%;
+
+  /*--------------- color used in the app---------------------- */
   --clr-white: #ffffff;
   --clr-black: #000000;
   --clr-error: #eb5757;

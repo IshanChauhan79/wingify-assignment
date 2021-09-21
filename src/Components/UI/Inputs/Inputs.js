@@ -1,7 +1,10 @@
 import React, { memo } from "react";
 import classes from "./Inputs.module.css";
 
+// a UI componet for email,password,text inputs
+
 function Inputs(props) {
+  // return input for type number
   if (props.type === "number") {
     return (
       <div className={classes.Inputs}>
@@ -19,6 +22,7 @@ function Inputs(props) {
       </div>
     );
   }
+  // return input for email ,password ,text
   return (
     <div className={classes.Inputs}>
       <input

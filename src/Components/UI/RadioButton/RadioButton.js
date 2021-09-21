@@ -1,8 +1,8 @@
 import React from "react";
 import classes from "./RadioButton.module.css";
 
+// return UI for radio button,receive items in props
 function RadioButton(props) {
-  console.log("radio");
   return (
     <div className={classes.RadioButton}>
       {props.buttonList.map((item, i) => [

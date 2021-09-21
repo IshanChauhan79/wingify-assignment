@@ -1,3 +1,6 @@
+// is used to validate email and password
+//return true if valid
+
 export const validateInput = (value, type) => {
   if (type === "email") {
     let regex =

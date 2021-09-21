@@ -1,3 +1,4 @@
+// list of months
 export const MONTHS = [
   "January",
   "February",
@@ -13,10 +14,12 @@ export const MONTHS = [
   "December",
 ];
 
+// return the index of specific month
 export const getMonthIndex = (value) => {
   return MONTHS.findIndex((el) => value === el) + 1;
 };
 
+// return the list of last 60 year starting form 17 year ago
 export const getYears = () => {
   var current = new Date().getFullYear() - 17;
   var years = [];

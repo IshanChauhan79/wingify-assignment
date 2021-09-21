@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 import classes from "./SelectInput.module.css";
 
+//return custom select button
 function SelectInput(props) {
   const [open, setOpen] = useState(false);
 
+  // used for showing and hiding drop down
   const dropDownValueClicked = (value) => {
     setOpen(false);
     props.change(value);
   };
 
+  // displays elements of drop down
   const dropDown = open ? (
     <div className={classes.DropdownMenu}>
       {props.options.map((opt) => {
@@ -27,6 +30,7 @@ function SelectInput(props) {
       })}
     </div>
   ) : null;
+
   return (
     <div
       className={[classes.SelectInput, open ? classes.DropMenuOpened : ""].join(

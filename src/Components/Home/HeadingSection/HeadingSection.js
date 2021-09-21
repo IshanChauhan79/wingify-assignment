@@ -3,6 +3,7 @@ import classes from "./HeadingSection.module.css";
 import headingBackground from "../../../assets/images/headingBackground.jpg";
 import headingBackground90 from "../../../assets/images/headingBackground90.jpg";
 
+// return the background image sectoin with heading and description
 function HeadingSection() {
   return (
     <div className={classes.HeadingSection}>

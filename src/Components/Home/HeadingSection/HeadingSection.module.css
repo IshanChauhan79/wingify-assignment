@@ -1,8 +1,8 @@
 .HeadingSection {
   height: 55rem;
   position: relative;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
   overflow: hidden;
 }
 .ImageForDesktop {
@@ -31,13 +31,13 @@
   width: 70%;
   font-weight: 500;
   font-size: 1.7rem;
-  line-height: 20px;
+  line-height: 20rem;
 }
 
 @media screen and (max-width: 56em) {
   .HeadingSection {
     height: 55rem;
-    width:32rem ;
+    width: 32rem;
   }
   .Heading {
     width: 80%;

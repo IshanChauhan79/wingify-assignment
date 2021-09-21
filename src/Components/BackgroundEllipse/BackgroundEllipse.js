@@ -1,11 +1,13 @@
 import React from "react";
 import classes from "./BackgroundEllipse.module.css";
 
+// return the code for eliipse shape in background
 function BackgroundEllipse() {
-  console.log("hello")
-  return <div className={classes.BackgroundEllipse}>
+  return (
+    <div className={classes.BackgroundEllipse}>
       <div className={classes.BackgroundEllipseComponent}></div>
-  </div>;
+    </div>
+  );
 }
 
 export default BackgroundEllipse;

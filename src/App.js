@@ -13,16 +13,3 @@ function App() {
 }
 
 export default App;
-
-// import React from "react";
-// import classes from "./App.module.css";
-// import BackgroundEllipse from "./Components/BackgroundEllipse/BackgroundEllipse";
-
-// function App() {
-//   return (
-//     <div className={classes.App}>
-//     </div>
-//   );
-// }
-
-// export default App;
